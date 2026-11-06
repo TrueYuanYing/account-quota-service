@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+psql --username "$POSTGRES_USER" --dbname "$POSTGRES_DB" --set=ON_ERROR_STOP=1 \
+ --set=auth_password="$AUTH_DB_PASSWORD" --set=api_password="$API_DB_PASSWORD" \
+ --set=model_password="$MODEL_DB_PASSWORD" --set=payment_password="$PAYMENT_DB_PASSWORD" <<'SQL'
+CREATE ROLE iko_auth LOGIN NOINHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE PASSWORD :'auth_password';
+CREATE SCHEMA auth AUTHORIZATION iko_auth;
+ALTER ROLE iko_auth SET search_path TO auth, public;
+GRANT CONNECT ON DATABASE iko TO iko_auth;
+CREATE ROLE iko_api LOGIN NOINHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE PASSWORD :'api_password';
+CREATE ROLE iko_model LOGIN NOINHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE PASSWORD :'model_password';
+CREATE ROLE iko_payments LOGIN NOINHERIT NOSUPERUSER NOCREATEDB NOCREATEROLE PASSWORD :'payment_password';
+SQL

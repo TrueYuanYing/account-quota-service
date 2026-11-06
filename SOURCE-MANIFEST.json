@@ -1,0 +1,496 @@
+{
+  "baseline": "IKO 0.3.11+94",
+  "recordDate": "2026-11-04",
+  "extractedOn": "2026-11-06",
+  "files": [
+    {
+      "source": "server/accounts-commerce/account_api.mjs",
+      "target": "account_api.mjs",
+      "sourceSha256": "647523b056bb6d7238390118db5b2c5b8dfd9d2847f74b4cf1a0135a6afa2f11",
+      "publishedSha256": "97d803ff883fc720de8c0cff4259b58962ffd63d9ed0f4add1102e6778c3bdf3",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/account_api.test.mjs",
+      "target": "account_api.test.mjs",
+      "sourceSha256": "04d1d82483b66b729e1460245068dc58abb01a8645f713fa9d12d61c3de1367c",
+      "publishedSha256": "04d1d82483b66b729e1460245068dc58abb01a8645f713fa9d12d61c3de1367c",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/account_identity.mjs",
+      "target": "account_identity.mjs",
+      "sourceSha256": "4fd75c677666402c6c169dc7386a8b94d4303c42c355c0d6556c4c585fde43c1",
+      "publishedSha256": "3c9761150b55cad7e288ee8a99d56c9f68c84cb15f75bd6938e5603eb366c7b8",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/account_management.mjs",
+      "target": "account_management.mjs",
+      "sourceSha256": "be993278779c5547c8ad670e31aeaf57ae1d3b2914d3d425a10e48ea99b2ac2b",
+      "publishedSha256": "9051a426e32807fb45ad20a2565436de60099c0f86535d09a86ac717d5ff4695",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/account_management.test.mjs",
+      "target": "account_management.test.mjs",
+      "sourceSha256": "a5b17af558f689c1afda32efba11477694d974d40c78a674f2fd7d61cf8fdac8",
+      "publishedSha256": "a5b17af558f689c1afda32efba11477694d974d40c78a674f2fd7d61cf8fdac8",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/account_model.mjs",
+      "target": "account_model.mjs",
+      "sourceSha256": "29f4201eb6c74990875ff7218a7e8493dc00fb62cb5038ccc4d0a98e254ae088",
+      "publishedSha256": "edf2cbf541af0801630370a56efaa0af33a8ac2ea6683da11fa7dfbf0101adce",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/account_model.test.mjs",
+      "target": "account_model.test.mjs",
+      "sourceSha256": "3af6aabc4ff109e00fc6c247eac790edc90674da2ab2c0fd392ba88f0a640708",
+      "publishedSha256": "396aadb51b573ebf354b36aac732906a0a8d468c8ae6f63c30132bf5e5a2c8b1",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/account_model_http.test.mjs",
+      "target": "account_model_http.test.mjs",
+      "sourceSha256": "b915ea2efe07d7c6b4e6b0dc192592cc1548280d09e600b7b2cc283e15d08fde",
+      "publishedSha256": "b915ea2efe07d7c6b4e6b0dc192592cc1548280d09e600b7b2cc283e15d08fde",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/account_store.mjs",
+      "target": "account_store.mjs",
+      "sourceSha256": "03e3baf94df4c2ba18881456648ee5cf53715030360760f2d91c5eee86342bce",
+      "publishedSha256": "c3f2b58dbc22a93da426bb8dec425e04781998f0c85bf4a6bc31d780df82d22f",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/capacity.mjs",
+      "target": "capacity.mjs",
+      "sourceSha256": "74109b0860f8a12df6e8cd2ee098ab5e032c7750b431b62cef631e7c2fa843df",
+      "publishedSha256": "74109b0860f8a12df6e8cd2ee098ab5e032c7750b431b62cef631e7c2fa843df",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/capacity.test.mjs",
+      "target": "capacity.test.mjs",
+      "sourceSha256": "bb8b316b30903f0494ddc9f4814186ea3b1b89ae038b532affa89d96019fef64",
+      "publishedSha256": "bb8b316b30903f0494ddc9f4814186ea3b1b89ae038b532affa89d96019fef64",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/identity87.test.mjs",
+      "target": "identity87.test.mjs",
+      "sourceSha256": "48086983c80d23d34eafa49f045ceacf180b7d74e970cb164ee3e664a09e471b",
+      "publishedSha256": "ef1be137aecab03dc526683cc7c7d5d398c6b21e4736fb1d0883667ff9a76d48",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/identity97.test.mjs",
+      "target": "identity97.test.mjs",
+      "sourceSha256": "f46b6df64f77327e7b0730082bcdc8438dd1bf4ee1b4d7059f96fb2d45e80a11",
+      "publishedSha256": "aa593b9fa7063da91f086771cf358578738ad8390dfa023aa4cd57bf90dccf91",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/model_journal.mjs",
+      "target": "model_journal.mjs",
+      "sourceSha256": "2f42515cf4103b3a094bb5d84015d83a743ff61f883f64dd5a7edd3dd1d83675",
+      "publishedSha256": "ac4308f9aed13c831a6e1c2fd9294fcd984e3057841a3598544352f738eecd58",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/model_journal.test.mjs",
+      "target": "model_journal.test.mjs",
+      "sourceSha256": "e358fbc95e6961edea711d25bd419403a3009ce57127233ae51d246f91ad5fee",
+      "publishedSha256": "148f0df21a18d9b1b77933ca63601e336efacfc5b6e98fe171d0fe46d8cd3158",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/payment_trial.test.mjs",
+      "target": "payment_trial.test.mjs",
+      "sourceSha256": "9d6edecdbae1bf5b18daa0f3d86744ee88ac8ac2a0f27285e9e8aa85ecb21f41",
+      "publishedSha256": "9d6edecdbae1bf5b18daa0f3d86744ee88ac8ac2a0f27285e9e8aa85ecb21f41",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/provider_admin.test.mjs",
+      "target": "provider_admin.test.mjs",
+      "sourceSha256": "4e89226db941dd0e9533dea366e974559fd3b0688a97c98fd7b796f61d46d989",
+      "publishedSha256": "4e89226db941dd0e9533dea366e974559fd3b0688a97c98fd7b796f61d46d989",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/provider_gateway.mjs",
+      "target": "provider_gateway.mjs",
+      "sourceSha256": "eb6b7149b07074a96699f2ef1f8a498282d768d833c8864b8dd6e730cb11fbc6",
+      "publishedSha256": "a99ac3bfafaa80e59060196b8575f8918ff1ac1db191f5e12b48ea1a730742fa",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/provider_gateway.test.mjs",
+      "target": "provider_gateway.test.mjs",
+      "sourceSha256": "d66c659a2c90cfa6305269ff7a79689c01639925aa66f60af28c62f3bbae9ed4",
+      "publishedSha256": "08601a6b58f33c82f233b6cf9bf28fe21f459b1fc22fb9fbe76086c68abceb06",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/provider_registry.mjs",
+      "target": "provider_registry.mjs",
+      "sourceSha256": "5f68ea48987358430b5de1d2a7df2534897f565fea8b612c113f2b7b82336b57",
+      "publishedSha256": "5f68ea48987358430b5de1d2a7df2534897f565fea8b612c113f2b7b82336b57",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/provider_registry.test.mjs",
+      "target": "provider_registry.test.mjs",
+      "sourceSha256": "1a7a8c64092c691d714db2cad8eb241ca3908ee62810c735e99e861619b70fd4",
+      "publishedSha256": "27140b411f19696166d9dc054c7079d2df68ad6db0b7192da2e57b56be1de722",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/service.mjs",
+      "target": "service.mjs",
+      "sourceSha256": "554a9c10f2aa50053ddcde33f5420be3d4b566d1e6b4a67303f85fedaa46c908",
+      "publishedSha256": "2dd2a6e668804b4d25b4917d497cfe3fb8618dcd2035c538660d9c27973cdbef",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/zpay_checkout.mjs",
+      "target": "zpay_checkout.mjs",
+      "sourceSha256": "50638af42ff80de2e7fb4f02b0988c99e2cd675e5bf6a0858a1c91b8a5f75bb0",
+      "publishedSha256": "39e2c141ce4521c5072919731b9a9ddc181bfe4ec5e1812ae03f7ae7512f0450",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/zpay_checkout.test.mjs",
+      "target": "zpay_checkout.test.mjs",
+      "sourceSha256": "eaa60c02ab74f956df92754fabe59045b1afb1aa3efd943d997d40877b0a1910",
+      "publishedSha256": "e034164ed6d30e84bff320191acd3dc1213a18d8103c7c2b50d1bd50eb17d917",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/zpay_protocol.mjs",
+      "target": "zpay_protocol.mjs",
+      "sourceSha256": "faa72b58cf0583097d7c4d97c9772a9ef3c2e71b9def164e1fc1db07b706638a",
+      "publishedSha256": "faa72b58cf0583097d7c4d97c9772a9ef3c2e71b9def164e1fc1db07b706638a",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/zpay_protocol.test.mjs",
+      "target": "zpay_protocol.test.mjs",
+      "sourceSha256": "dae1aac90f2379b82ba5f9f89d5e6759369fa3850311ca15457876062658e01c",
+      "publishedSha256": "dae1aac90f2379b82ba5f9f89d5e6759369fa3850311ca15457876062658e01c",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/package.json",
+      "target": "package.json",
+      "sourceSha256": "fda7e3da3f4e86a93619645e8af0cd7b87821a2f77bbc6895cdc15c7a9750ccd",
+      "publishedSha256": "c1fe9000f2898b76acef3987ba43083915fe11b51f7c01f6b8f27aad09f5f1a7",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/package-lock.json",
+      "target": "package-lock.json",
+      "sourceSha256": "42a3c05992f08571098d7bf7b1626259492eb767a07bcaf721ad3c71d1435f94",
+      "publishedSha256": "42a3c05992f08571098d7bf7b1626259492eb767a07bcaf721ad3c71d1435f94",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/001_ledger.sql",
+      "target": "migrations/001_ledger.sql",
+      "sourceSha256": "b1705049613373ba4091c36fd35bf62e37a02a2a94307f5997d6384d5d9ba137",
+      "publishedSha256": "4b9f2e26386993e7793cb3b26d41d69c7073742ab762ac55f125e9efd5b49bb8",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/migrations/002_topups_feedback.sql",
+      "target": "migrations/002_topups_feedback.sql",
+      "sourceSha256": "ef4cb16fa0e0f2fb6d5cc465bc448c9197e3c5dfc92a40ab19acd39eea6f3a38",
+      "publishedSha256": "ef4cb16fa0e0f2fb6d5cc465bc448c9197e3c5dfc92a40ab19acd39eea6f3a38",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/003_account_model.sql",
+      "target": "migrations/003_account_model.sql",
+      "sourceSha256": "0c6331974ab364b17d90f290e289c2b7487eec72dd76b203312cd259ad0caee4",
+      "publishedSha256": "0c6331974ab364b17d90f290e289c2b7487eec72dd76b203312cd259ad0caee4",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/004_zpay_checkout.sql",
+      "target": "migrations/004_zpay_checkout.sql",
+      "sourceSha256": "24d4ae80e64b4580b6559910f60eaf0ec728c310c257740a02d1ec4f47746ab7",
+      "publishedSha256": "24d4ae80e64b4580b6559910f60eaf0ec728c310c257740a02d1ec4f47746ab7",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/005_trial_payment.sql",
+      "target": "migrations/005_trial_payment.sql",
+      "sourceSha256": "2c4dccb44f08dc1a96406024d8eb2f206be200293011867fd10dfe6726ec4c26",
+      "publishedSha256": "2c4dccb44f08dc1a96406024d8eb2f206be200293011867fd10dfe6726ec4c26",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/006_trial_retry.sql",
+      "target": "migrations/006_trial_retry.sql",
+      "sourceSha256": "1c69ad24dace2ce48b145a64f39c96d19c7ec129f60b679753c8c1812751b8c4",
+      "publishedSha256": "1c69ad24dace2ce48b145a64f39c96d19c7ec129f60b679753c8c1812751b8c4",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/007_usage_indexes.sql",
+      "target": "migrations/007_usage_indexes.sql",
+      "sourceSha256": "c07e50b72bf5749ac127d4c8083431ad139e97c96e558153ba0fd9e0aeefdd54",
+      "publishedSha256": "c07e50b72bf5749ac127d4c8083431ad139e97c96e558153ba0fd9e0aeefdd54",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/008_checkout_requests.sql",
+      "target": "migrations/008_checkout_requests.sql",
+      "sourceSha256": "57a69ddd365c77d10d09c1bf1167536a2ec4fc4e8e1e7118fb8cf8edbf119d16",
+      "publishedSha256": "57a69ddd365c77d10d09c1bf1167536a2ec4fc4e8e1e7118fb8cf8edbf119d16",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/009_model_outcomes.sql",
+      "target": "migrations/009_model_outcomes.sql",
+      "sourceSha256": "7614a282f5056bfcefc4a8b9936d5fff56b68006dfe6801763f9f508e5c8b233",
+      "publishedSha256": "7614a282f5056bfcefc4a8b9936d5fff56b68006dfe6801763f9f508e5c8b233",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/010_order_expiry_profiles.sql",
+      "target": "migrations/010_order_expiry_profiles.sql",
+      "sourceSha256": "c75eea970f861b9fcf305adaa8d732cccb1b7fcfa0eb8a560834ed2cf7ac940d",
+      "publishedSha256": "fd43ff1f5ec8ba27c7564ce937b7ea081b674423c60ed5357f0b4502d3f99ac3",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/migrations/011_catalog86.sql",
+      "target": "migrations/011_catalog86.sql",
+      "sourceSha256": "c9f92481bd3b9f7012f9aac43659c040a2ceb697f0f515dbed3d3f62d3d12629",
+      "publishedSha256": "c9f92481bd3b9f7012f9aac43659c040a2ceb697f0f515dbed3d3f62d3d12629",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/012_account_extras87.sql",
+      "target": "migrations/012_account_extras87.sql",
+      "sourceSha256": "40d305c9738424e6962ecefb184c220733ae6ecc3dc8d27a031ac815a8deab88",
+      "publishedSha256": "40d305c9738424e6962ecefb184c220733ae6ecc3dc8d27a031ac815a8deab88",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/migrations/013_catalog_adjustments87.sql",
+      "target": "migrations/013_catalog_adjustments87.sql",
+      "sourceSha256": "97b3968635789d6efff7c544de3ea8a5dd32bac62d5a48ea06c7a4812fc03599",
+      "publishedSha256": "97b3968635789d6efff7c544de3ea8a5dd32bac62d5a48ea06c7a4812fc03599",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/tests/account_store.integration.mjs",
+      "target": "tests/account_store.integration.mjs",
+      "sourceSha256": "f37e0b295b3bb867da9b2ed666960830f1c81246a7e955a87cec124734815e15",
+      "publishedSha256": "f37e0b295b3bb867da9b2ed666960830f1c81246a7e955a87cec124734815e15",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/tests/ledger.sql",
+      "target": "tests/ledger.sql",
+      "sourceSha256": "68d83e2879fe6affe0b176513c95e17b387f768a0dc2068f4320f52a9f601905",
+      "publishedSha256": "9d5f961ca56b1e600b885196afaddf1c1b3908e54e3233469d2c41cc5b8d0dfa",
+      "adapted": true
+    },
+    {
+      "source": "server/accounts-commerce/tests/topups66.sql",
+      "target": "tests/topups66.sql",
+      "sourceSha256": "361e54580a5ddb0c1d3f6d80d211db14f2c3d4e8d1f0b8d52870b3cc2923bd9a",
+      "publishedSha256": "361e54580a5ddb0c1d3f6d80d211db14f2c3d4e8d1f0b8d52870b3cc2923bd9a",
+      "adapted": false
+    },
+    {
+      "source": "server/accounts-commerce/tests/topups_store66.integration.mjs",
+      "target": "tests/topups_store66.integration.mjs",
+      "sourceSha256": "91a3171a4f06caef8dae3ffb45fa257c36368b413082a143c31c7de6bed89916",
+      "publishedSha256": "91a3171a4f06caef8dae3ffb45fa257c36368b413082a143c31c7de6bed89916",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/services/account/account_auth.dart",
+      "target": "reference/flutter/lib/services/account/account_auth.dart",
+      "sourceSha256": "94ee3359dd0716d90287bf2dcbf046d7e4a9dc1d8fced8b4c99284fff04ee029",
+      "publishedSha256": "ab92ed6fa33a279d4e58023ebc1582e56f12edcc0b399402afc1987dfc398d08",
+      "adapted": true
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/services/account/account_business.dart",
+      "target": "reference/flutter/lib/services/account/account_business.dart",
+      "sourceSha256": "12f1cbf04215ae085d91429dbd3c139a95363de7c71275d419390703112a931e",
+      "publishedSha256": "ad038a02ee5c4d96d6bd50e6dc229adea7e19780c540180368aaf46820113303",
+      "adapted": true
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/services/account/account_identity.dart",
+      "target": "reference/flutter/lib/services/account/account_identity.dart",
+      "sourceSha256": "f9666c09d1ff27b88074f7f62e3187bf9d0161599fc2dc9e6d522cc77415690f",
+      "publishedSha256": "f9666c09d1ff27b88074f7f62e3187bf9d0161599fc2dc9e6d522cc77415690f",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/services/account/account_quota_service.dart",
+      "target": "reference/flutter/lib/services/account/account_quota_service.dart",
+      "sourceSha256": "c1ed729210d05692b62ca606eb11281bf16035c55839ffdebc1f519cbbef234d",
+      "publishedSha256": "01383511bb98138a81b9fbec93f1f27ca180eafa92a6dc386b84d6e306103e06",
+      "adapted": true
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/services/account/operation_id.dart",
+      "target": "reference/flutter/lib/services/account/operation_id.dart",
+      "sourceSha256": "7dbe80d7d011cf5eb79769b452bef536caf606372df99fc9c80892546ee34fcb",
+      "publishedSha256": "7dbe80d7d011cf5eb79769b452bef536caf606372df99fc9c80892546ee34fcb",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/account_profile_screen.dart",
+      "target": "reference/flutter/lib/features/account/account_profile_screen.dart",
+      "sourceSha256": "6fbc3646e7642fe1d17118c7bd5fe9913087d019c7465f0c805edc50edd3baa6",
+      "publishedSha256": "6fbc3646e7642fe1d17118c7bd5fe9913087d019c7465f0c805edc50edd3baa6",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/account_screen.dart",
+      "target": "reference/flutter/lib/features/account/account_screen.dart",
+      "sourceSha256": "6511f641ae1de5c787660e755cca6c957e650382600cee13bfc1ae34c5bd3656",
+      "publishedSha256": "f4d4061704353de745a0bea120f6a1e3eae0f7b56496553825c2fb4fdcdf914f",
+      "adapted": true
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/account_wallet_screen.dart",
+      "target": "reference/flutter/lib/features/account/account_wallet_screen.dart",
+      "sourceSha256": "486effd627da89ffa1ccaa6d5184b6683f38621b4f4893538f5b26f9e30fbb80",
+      "publishedSha256": "e60df1aa42126cd41bae850a0ce168ab68eebccca545294a678b33b83ffe3b50",
+      "adapted": true
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/checkout_screen.dart",
+      "target": "reference/flutter/lib/features/account/checkout_screen.dart",
+      "sourceSha256": "15302c4e38bea985364e6edb201f548fa72396a071c70a6b8eaf6b6ed5c089b5",
+      "publishedSha256": "c4cfb951e9c764fe7fa836b5d90abdbef1d468a7820c3599f5204a7e71077f3a",
+      "adapted": true
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/login_brand.dart",
+      "target": "reference/flutter/lib/features/account/login_brand.dart",
+      "sourceSha256": "a02647d02f647dec4f507b9a00b699168f3ab980190e2b33af490e2eccbd1aa1",
+      "publishedSha256": "a02647d02f647dec4f507b9a00b699168f3ab980190e2b33af490e2eccbd1aa1",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/product_feedback_screen.dart",
+      "target": "reference/flutter/lib/features/account/product_feedback_screen.dart",
+      "sourceSha256": "b6cd02b4ed91133e9f6c3d351ad329406ede04cc3d09a3b6d3dd0186f9c7143f",
+      "publishedSha256": "b6cd02b4ed91133e9f6c3d351ad329406ede04cc3d09a3b6d3dd0186f9c7143f",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/account/quota_product_card.dart",
+      "target": "reference/flutter/lib/features/account/quota_product_card.dart",
+      "sourceSha256": "b10734f7b88db06bad2e13ad893ecdc59978b0eee8d540fbea88fdb56843108a",
+      "publishedSha256": "b10734f7b88db06bad2e13ad893ecdc59978b0eee8d540fbea88fdb56843108a",
+      "adapted": false
+    },
+    {
+      "source": "source/main/outputs/iko-public-beta/lib/features/ai/doubao_web_screen.dart",
+      "target": "reference/flutter/lib/features/ai/doubao_web_screen.dart",
+      "sourceSha256": "ed5dd69b074d0b4c2439f8d9c93de23e9076be8f8bcb92560822e385419b3509",
+      "publishedSha256": "bb00ef078ec4ffe4f5523179c68ec3461778a67834b3ec76af46ddf78f164642",
+      "adapted": true
+    }
+  ],
+  "excludedFiles": {},
+  "generatedFiles": [
+    {
+      "target": ".dockerignore",
+      "sha256": "c799092312c3b0f439cda88f588a5eba15be39f102ebb9801883622e04dea276"
+    },
+    {
+      "target": ".env.example",
+      "sha256": "7cfd6af450f2d306e1f0d2de3e7eb9f35a4100145186641e4652ecaed0d498c4"
+    },
+    {
+      "target": ".gitattributes",
+      "sha256": "ba760de3d447e0b3f71a54df3e3360231b05dd98b4584b92b1e792a53eefdd0d"
+    },
+    {
+      "target": ".gitignore",
+      "sha256": "b50c1ad7239dc1a10e179e3fa173d17a5f752e4dd174b97ab4d24e98bf2d4134"
+    },
+    {
+      "target": "CONTRIBUTING.md",
+      "sha256": "70229ef64c017ab35611eaabf4ff90af9dbbdbe3bdc4ee6cbffddd8477b979e1"
+    },
+    {
+      "target": "LICENSE",
+      "sha256": "0ce17ff75376a5e69f909e91b4b145c36ce3848e95156d764a5a37a0d4a6ffdc"
+    },
+    {
+      "target": "README.md",
+      "sha256": "312533d3d0c6156461278710d1c7d7428f9250a63c73f45105280478d24717bf"
+    },
+    {
+      "target": "SECURITY.md",
+      "sha256": "e00ee6595322461749c1030aa9697f40e34e9826480c2c34927907a7f77f3b36"
+    },
+    {
+      "target": "THIRD-PARTY.md",
+      "sha256": "eabb7fb5416fade5da04996ed5271941368bf8fa6f84060116d80ca2327dc60b"
+    },
+    {
+      "target": "VALIDATION.md",
+      "sha256": "4d3f7e030dfbef22ae0042ca7d183493f4824fa533486e03e7c921c2ff6c68b0"
+    },
+    {
+      "target": "deploy/compose.yaml",
+      "sha256": "68cdd4aa8b6641a097120aa937b21c9e7c7349283b38fcc357f4f82efcd5ba72"
+    },
+    {
+      "target": "deploy/Dockerfile",
+      "sha256": "039bbeb13e3b5bf88c9d0d68be342191aa206f9ca9ca10616f304f497d713d06"
+    },
+    {
+      "target": "deploy/email-otp.html",
+      "sha256": "af90239c0af1cab3b5c12117abd5a0689a776b7700761651b6219373a868a781"
+    },
+    {
+      "target": "deploy/grants.sql",
+      "sha256": "42b03e9e28662b66d56ac597cdbdbdcf20a8e7bf9898f8a264c368884c985bc6"
+    },
+    {
+      "target": "deploy/init-db.sh",
+      "sha256": "94456da0424b6ee9e35a7c0edb595a85a4f712f2b5e2de169bbbf51e3856b253"
+    },
+    {
+      "target": "deploy/migrate.sh",
+      "sha256": "91a53d089a1d9f3e9d4657367344f8791efc738eab0da1c76faf1f0554de1341"
+    },
+    {
+      "target": "docs/ARCHITECTURE.md",
+      "sha256": "20de61bf3f5f1d3f22bb0d92f525ba2442c4432787b312f3a373dd223e793107"
+    },
+    {
+      "target": "docs/DEPLOYMENT.md",
+      "sha256": "a5d7d73954e8e264e755d39914d125d4a2994fbc220a16563b863589061d2acf"
+    },
+    {
+      "target": "docs/USER-GUIDE.md",
+      "sha256": "0a79a8312070c873de9b8584d969c09ccddd11edd2aa56aeec12155f2d733d10"
+    },
+    {
+      "target": "example/demo.mjs",
+      "sha256": "8bb3716e6b99f28fcf4c167a75f30e58835d8b6c56b9bb2ba87c3696f41fb3df"
+    }
+  ]
+}

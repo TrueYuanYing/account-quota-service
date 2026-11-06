@@ -1,0 +1,103 @@
+name: account-quota-example
+services:
+  db:
+    image: ${POSTGRES_IMAGE:?Set your verified PostgreSQL image digest}
+    environment:
+      POSTGRES_DB: iko
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Required}
+      AUTH_DB_PASSWORD: ${AUTH_DB_PASSWORD:?Required}
+      API_DB_PASSWORD: ${API_DB_PASSWORD:?Required}
+      MODEL_DB_PASSWORD: ${MODEL_DB_PASSWORD:?Required}
+      PAYMENT_DB_PASSWORD: ${PAYMENT_DB_PASSWORD:?Required}
+    volumes:
+      - database:/var/lib/postgresql/data
+      - ./init-db.sh:/docker-entrypoint-initdb.d/10-init.sh:ro
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres -d iko]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+  auth:
+    image: ${AUTH_IMAGE:?Set your verified official GoTrue image digest}
+    depends_on:
+      db:
+        condition: service_healthy
+    ports: [127.0.0.1:9999:9999]
+    environment:
+      GOTRUE_API_HOST: 0.0.0.0
+      GOTRUE_API_PORT: "9999"
+      API_EXTERNAL_URL: ${AUTH_EXTERNAL_URL:?Required}
+      GOTRUE_SITE_URL: ${AUTH_EXTERNAL_URL:?Required}
+      GOTRUE_DB_DRIVER: postgres
+      GOTRUE_DB_DATABASE_URL: postgres://iko_auth:${AUTH_DB_PASSWORD}@db:5432/iko?search_path=auth
+      GOTRUE_DISABLE_SIGNUP: "${AUTH_DISABLE_SIGNUP:-true}"
+      GOTRUE_EXTERNAL_EMAIL_ENABLED: "true"
+      GOTRUE_MAILER_AUTOCONFIRM: "false"
+      GOTRUE_JWT_SECRET: ${JWT_SECRET:?Required}
+      GOTRUE_JWT_AUD: authenticated
+      GOTRUE_JWT_ADMIN_ROLES: service_role
+      GOTRUE_JWT_DEFAULT_GROUP_NAME: authenticated
+      GOTRUE_SECURITY_REFRESH_TOKEN_ROTATION_ENABLED: "true"
+      GOTRUE_MAILER_OTP_EXP: "600"
+      GOTRUE_MAILER_OTP_LENGTH: "6"
+      GOTRUE_SMTP_HOST: "${SMTP_HOST:-}"
+      GOTRUE_SMTP_PORT: "${SMTP_PORT:-465}"
+      GOTRUE_SMTP_USER: "${SMTP_USER:-}"
+      GOTRUE_SMTP_PASS: "${SMTP_PASSWORD:-}"
+      GOTRUE_SMTP_ADMIN_EMAIL: "${SMTP_ADMIN_EMAIL:-}"
+      GOTRUE_SMTP_SENDER_NAME: "${SMTP_SENDER_NAME:-Study App}"
+      GOTRUE_SMTP_MAX_FREQUENCY: "60s"
+      GOTRUE_MAILER_TEMPLATES_CONFIRMATION: "${MAIL_TEMPLATE_URL:-}"
+      GOTRUE_MAILER_TEMPLATES_MAGIC_LINK: "${MAIL_TEMPLATE_URL:-}"
+      GOTRUE_RATE_LIMIT_EMAIL_SENT: "30"
+      GOTRUE_RATE_LIMIT_TOKEN_REFRESH: "60"
+      GOTRUE_PASSWORD_MIN_LENGTH: "10"
+  migrate:
+    image: ${POSTGRES_IMAGE:?Required}
+    profiles: [setup]
+    environment:
+      PGHOST: db
+      PGUSER: postgres
+      PGDATABASE: iko
+      PGPASSWORD: ${POSTGRES_PASSWORD:?Required}
+    volumes:
+      - ../migrations:/migrations:ro
+      - ./:/deploy:ro
+    entrypoint: [sh, /deploy/migrate.sh]
+    depends_on:
+      db:
+        condition: service_healthy
+  api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    profiles: [app]
+    ports: [127.0.0.1:8080:8080]
+    environment:
+      DATABASE_URL: postgres://iko_api:${API_DB_PASSWORD}@db:5432/iko
+      AUTH_INTERNAL_URL: http://auth:9999/
+      PUBLIC_ACCOUNT_URL: ${PUBLIC_ACCOUNT_URL:?Required}
+      ADMIN_STATUS_URL: ${ADMIN_STATUS_URL:-https://admin.example.invalid/v1/license/status}
+      # Blank connections keep the paid model/payment executors disabled.
+      MODEL_DATABASE_URL: "${MODEL_DATABASE_URL:-}"
+      PAYMENT_DATABASE_URL: "${PAYMENT_DATABASE_URL:-}"
+      ACCOUNT_PROXY_KEY: "${ACCOUNT_PROXY_KEY:-}"
+      MODEL_RELAY_URL: "${MODEL_RELAY_URL:-https://relay.example.invalid/v1/internal/complete}"
+      LEGACY_BALANCE_URL: "${LEGACY_BALANCE_URL:-https://relay.example.invalid/v1/internal/balance}"
+      PROVIDER_ENCRYPTION_KEY: "${PROVIDER_ENCRYPTION_KEY:-}"
+      PAYMENT_LINK_KEY: "${PAYMENT_LINK_KEY:-}"
+      ZPAY_PID: "${ZPAY_PID:-}"
+      ZPAY_CID: "${ZPAY_CID:-}"
+      ZPAY_KEY: "${ZPAY_KEY:-}"
+      MODEL_JOURNAL_DIRECTORY: /var/lib/iko-model-journal
+      PROVIDER_DIRECTORY: /var/lib/iko-providers
+      ZPAY_ENABLED: "${ZPAY_ENABLED:-0}"
+    volumes:
+      - journal:/var/lib/iko-model-journal
+      - providers:/var/lib/iko-providers
+    depends_on: [db, auth]
+volumes:
+  database:
+  journal:
+  providers:

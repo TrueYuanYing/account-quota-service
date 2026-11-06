@@ -1,0 +1,14 @@
+{
+  "name": "iko-account-commerce",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test *.test.mjs",
+    "start": "node example/demo.mjs",
+    "start:service": "node service.mjs"
+  },
+  "dependencies": {
+    "pg": "8.23.1"
+  }
+}
